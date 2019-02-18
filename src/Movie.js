@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Movie extends Component {
   state = { hover: false };
   render() {
-    const { title, poster_path, release_date } = this.props.movie;
+    const { title, poster_path, release_date, id } = this.props.movie;
     return (
       <div
         className="movie-item"
@@ -15,7 +16,11 @@ class Movie extends Component {
         }}
       >
         <div className={this.state.hover ? "movie-info" : "movie-info-hidden"}>
-          <p className="movie-title">{title}</p>
+          {console.log(this.props)}
+          <p className="movie-title">
+            {title}
+            <Link to={`/movie/${id}`}>Details</Link>
+          </p>
           <p className="movie-release">{release_date}</p>
         </div>
         <img

@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import "./App.scss";
-import Playing from "./Playing";
-import Trending from "./Trending";
+import { BrowserRouter as Router } from "react-router-dom";
+import Main from "./Main";
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <Trending />
-        <Playing />
-      </div>
+      <Router>
+        <div>
+          <Main />
+        </div>
+      </Router>
     );
   }
 }
