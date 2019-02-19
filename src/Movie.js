@@ -16,7 +16,6 @@ class Movie extends Component {
         }}
       >
         <div className={this.state.hover ? "movie-info" : "movie-info-hidden"}>
-          {console.log(this.props)}
           <p className="movie-title">
             {title}
             <Link to={`/movie/${id}`}>Details</Link>
