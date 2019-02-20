@@ -14,7 +14,7 @@ class Playing extends Component {
   render() {
     return (
       <>
-        <h1>Now Playing</h1>
+        <h1 className="page-heading">Now Playing</h1>
         <div className="movie-carousel">
           {this.state.data.map((movie, i) => (
             <Movie key={i} index={i} movie={movie} />

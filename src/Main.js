@@ -17,7 +17,6 @@ const Main = props => {
           return (
             <div>
               <Nav />
-              <Search />
               <Playing />
             </div>
           );
@@ -30,7 +29,6 @@ const Main = props => {
           return (
             <div>
               <Nav />
-              <Search />
               <Playing />
             </div>
           );
@@ -42,7 +40,6 @@ const Main = props => {
           return (
             <div>
               <Nav />
-              <Search />
               <Coming />
             </div>
           );
@@ -54,7 +51,6 @@ const Main = props => {
           return (
             <div>
               <Nav />
-              <Search />
               <Trending />
             </div>
           );

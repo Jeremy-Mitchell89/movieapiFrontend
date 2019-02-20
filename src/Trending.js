@@ -16,7 +16,7 @@ class Trending extends Component {
   render() {
     return (
       <>
-        <h1>Trending Movies</h1>
+        <h1 className="page-heading">Trending Movies</h1>
         <div className="movie-carousel">
           {this.state.data.map((movie, i) => (
             <Movie key={i} index={i} movie={movie} />

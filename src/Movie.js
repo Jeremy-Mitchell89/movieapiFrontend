@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 class Movie extends Component {
   state = { hover: false };
   render() {
-    const { title, poster_path, release_date, id } = this.props.movie;
+    const {
+      title,
+      poster_path,
+      release_date,
+      id,
+      vote_average
+    } = this.props.movie;
     return (
       <div
         className="movie-item"
@@ -16,11 +22,13 @@ class Movie extends Component {
         }}
       >
         <div className={this.state.hover ? "movie-info" : "movie-info-hidden"}>
-          <p className="movie-title">
+          <div className="movie-title ">
             {title}
-            <Link to={`/movie/${id}`}>Details</Link>
-          </p>
-          <p className="movie-release">{release_date}</p>
+            <div>Release: {release_date}</div>
+            <div>Rating: {vote_average}/10</div>
+            <Link to={`/movie/${id}`}>View Movie Details</Link>
+          </div>
+          <div />
         </div>
         <img
           className="movie-img"

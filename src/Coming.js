@@ -16,7 +16,7 @@ class Coming extends React.Component {
   render() {
     return (
       <>
-        <h1>Coming Soon</h1>
+        <h1 className="page-heading">Coming Soon</h1>
         <div className="movie-carousel">
           {this.state.data.map((movie, i) => (
             <Movie key={i} index={i} movie={movie} />
