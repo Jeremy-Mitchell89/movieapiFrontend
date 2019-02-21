@@ -14,18 +14,35 @@ const MovieDetails = props => {
         setData(res.data);
       });
   }, []);
-
   return (
-    <div>
+    <div className="movie-details-container">
       {console.log(data)}
-      <h1>{data.title}</h1>
-      <p>{data.overview}</p>
-      <p>Rating: {data.vote_average}/10</p>
-      <a href={`https://www.imdb.com/title/${data.imdb_id}`}>imdb</a>
+      <h1 className="page-heading">{data.title}</h1>
       <img
         src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
         alt="Poster"
       />
+      <div>
+        <p>
+          <i>{data.tagline}</i>
+        </p>
+        <label>Release Date</label>
+        <p>{data.release_date}</p>
+        <label>Summary</label>
+        <p>{data.overview}</p>
+        <p>
+          <b>Rating:</b> {data.vote_average}/10 ({data.vote_count} Votes)
+        </p>
+        <p>
+          <b>Runtime:</b> {data.runtime} Minutes
+        </p>
+        <p />
+      </div>
+      <div className="details-link">
+        <a href={`https://www.imdb.com/title/${data.imdb_id}`}>imdb</a>
+        <a href={`${data.homepage}`}>Visit Movie Homepage</a>
+      </div>
+      <div className="details-link" />
     </div>
   );
 };

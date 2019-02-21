@@ -13,16 +13,26 @@ const Main = props => {
       <Route
         exact
         path="/"
-        render={props => {
+        render={({ ...props }) => {
           return (
             <div>
               <Nav />
-              <Playing />
+              <Playing test="test" />
             </div>
           );
         }}
       />
-      <Route path="/movie/:id" component={MovieDetails} />
+      <Route
+        path="/movie/:id"
+        render={props => {
+          return (
+            <div>
+              <Nav />
+              <MovieDetails {...props} />
+            </div>
+          );
+        }}
+      />
       <Route
         path="/nowplaying"
         render={props => {

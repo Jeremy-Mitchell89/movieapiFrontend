@@ -80,16 +80,6 @@ body {
     color: $font-color;
   }
 }
-// .movie-release {
-//   font: bold 15px/20px Helvetica, Sans-Serif;
-//   padding: 0 6px;
-//   margin-top: 0;
-//   position: absolute;
-//   top: 0px;
-//   z-index: 1;
-//   background: rgba(0, 0, 0, 0.7);
-//   color: white;
-// }
 .movie-info {
   opacity: 1;
   transition-property: opacity;
@@ -99,4 +89,36 @@ body {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 0.5s;
+}
+.movie-details-container {
+  margin-left: 8%;
+  margin-right: 8%;
+  h1 {
+    text-align: center;
+  }
+  img {
+    float: left;
+    margin-right: 1%;
+    box-shadow: 10px 10px 5px #ccc;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  div {
+    background-color: rgb(243, 243, 243);
+  }
+  label {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  a {
+    text-decoration: none;
+    color: $font-color;
+    border: 1px solid $font-color;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+  }
+  .details-link {
+    margin: 30px 30px;
+  }
 }
