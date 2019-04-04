@@ -2,9 +2,10 @@
   "name": "movieapi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Jeremy-Mitchell89/movieapiFrontend",
+  "homepage": "https://jeremy-mitchell89.github.io/movieapiFrontend/",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -16,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
